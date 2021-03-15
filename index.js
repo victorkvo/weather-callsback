@@ -1,4 +1,4 @@
-// defining variables
+// variable declarations
 let search = document.getElementById("search"),
     submit = document.getElementById("submit"),
     cityName = document.getElementById("cityName"),
@@ -7,11 +7,11 @@ let search = document.getElementById("search"),
 // button that initiates main function
 submit.addEventListener('click', getDressed)
 
-
 function getDressed(e){
     e.preventDefault();
     let city = search.value;
 
+    // header for fetch request
 var myHeaders = new Headers();
 myHeaders.append("x-rapidapi-key", "865cddfcedmsh3d5ef6811e51047p164b80jsnf7e801f179b0");
 myHeaders.append("x-rapidapi-host", "community-open-weather-map.p.rapidapi.com");
@@ -24,13 +24,19 @@ var requestOptions = {
   redirect: 'follow'
 };
 
+// fetch request
 fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${city}&units=imperial&mode=xml%2C%20html`, requestOptions)
+// parsing response into json format
 .then(response => response.json())
+
 .then(result => {
-  // displays name of city searched
+  // outputs the name of the city searched
   cityName.innerHTML = result.name;
-  // condition.innerHTML = result.weather[0].main;  >>  code to display weather condition; not used.
-  //displays temperature
+
+  // outputs weather condition; code not used.
+  // condition.innerHTML = result.weather[0].main;
+
+  // outputs the temperature
   temp.innerHTML = result.main.temp;
 
 // testing for return outputs
@@ -63,6 +69,8 @@ if (result.weather[0].main=="Rain") {
 // clears search bar input
 document.getElementById('search').value='';
 })
+// if fetch request fails, this shows the error
+.catch((error) => console.log("error", error));
 }
 
 
