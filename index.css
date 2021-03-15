@@ -1,0 +1,54 @@
+body {
+    background: url("/weather/images/sky.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+   
+}
+
+#cityName{
+    font-size: xx-large;
+    color: red;
+    font-family: 'Fredoka One', cursive;
+}
+#condition{
+    font-size: xx-large;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+}
+h3{
+    color: blue;
+    font-family: 'Fredoka One', cursive;
+}
+
+h1{
+    color:red;
+    font-family: 'Fredoka One', cursive;
+}
+
+p{
+    color: purple;
+    font-size: xx-large;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+#needed{
+    color: greenyellow;
+    font-size: xx-large;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+
+img{
+    height: 80%;
+    border: solid 6px black;
+}
+
+#search{
+    font-size: 24px;
+    height: 40px;
+    width: 300px;
+}
