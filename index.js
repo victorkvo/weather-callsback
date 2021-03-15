@@ -37,24 +37,24 @@ fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${city}&units
 
 // dog clothing if/else statements
 if (result.weather[0].main=="Rain") {
-  document.getElementById("clothes").src="/weather/images/raincoat.jpg";
-  document.getElementById("shoes").src="/weather/images/rainboots.jpg"; 
-  document.getElementById("access").src="/weather/images/umbrella.jpg"; 
+  document.getElementById("clothes").src="/weather-callsback/images/raincoat.jpg";
+  document.getElementById("shoes").src="/weather-callsback/images/rainboots.jpg"; 
+  document.getElementById("access").src="/weather-callsback/images/umbrella.jpg"; 
   condition.innerHTML = "Rainy"
 } else if (result.weather[0].main!=="Rain" && result.main.temp>=80) {
-  document.getElementById("clothes").src="/weather/images/shirt.jpg";
-  document.getElementById("shoes").src="/weather/images/jordans.jpg"; 
-  document.getElementById("access").src="/weather/images/sunglass.jpg"; 
+  document.getElementById("clothes").src="/weather-callsback/images/shirt.jpg";
+  document.getElementById("shoes").src="/weather-callsback/images/jordans.jpg"; 
+  document.getElementById("access").src="/weather-callsback/images/sunglass.jpg"; 
   condition.innerHTML = "Not Rainy"
 } else if (result.weather[0].main!=="Rain" && result.main.temp<=60) {
-  document.getElementById("clothes").src="/weather/images/sweater.jpg"; 
-  document.getElementById("shoes").src="/weather/images/jordans.jpg"; 
-  document.getElementById("access").src="/weather/images/sunglass.jpg"; 
+  document.getElementById("clothes").src="/weather-callsback/images/sweater.jpg"; 
+  document.getElementById("shoes").src="/weather-callsback/images/jordans.jpg"; 
+  document.getElementById("access").src="/weather-callsback/images/sunglass.jpg"; 
   condition.innerHTML = "Not Rainy"
 } else {
-  document.getElementById("clothes").src="/weather/images/shirt.jpg"; 
-  document.getElementById("shoes").src="/weather/images/jordans.jpg"; 
-  document.getElementById("access").src="/weather/images/sunglass.jpg"; 
+  document.getElementById("clothes").src="/weather-callsback/images/shirt.jpg"; 
+  document.getElementById("shoes").src="/weather-callsback/images/jordans.jpg"; 
+  document.getElementById("access").src="/weather-callsback/images/sunglass.jpg"; 
   condition.innerHTML = "Not Rainy"
 }
 // clears search bar input
