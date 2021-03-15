@@ -55,7 +55,7 @@ if (result.weather[0].main=="Rain") {
   document.getElementById("access").src="/weather-callsback/images/sunglass.jpg"; 
   condition.innerHTML = "Not Rainy"
 } else {
-  document.getElementById("clothes").src="/weather-callsback/images/shirt.jpg"; 
+  document.getElementById("clothes").src="https://cdn10.bigcommerce.com/s-5o6frrlm/products/32171/images/95155/us2100_img__56098.1439457887.1280.1280.jpg"; 
   document.getElementById("shoes").src="/weather-callsback/images/jordans.jpg"; 
   document.getElementById("access").src="/weather-callsback/images/sunglass.jpg"; 
   condition.innerHTML = "Not Rainy"
