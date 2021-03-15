@@ -1,3 +1,4 @@
+// defining variables
 let search = document.getElementById("search"),
     submit = document.getElementById("submit"),
     cityName = document.getElementById("cityName"),
@@ -26,8 +27,10 @@ var requestOptions = {
 fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${city}&units=imperial&mode=xml%2C%20html`, requestOptions)
 .then(response => response.json())
 .then(result => {
+  // displays name of city searched
   cityName.innerHTML = result.name;
-  // condition.innerHTML = result.weather[0].main;
+  // condition.innerHTML = result.weather[0].main;  >>  code to display weather condition; not used.
+  //displays temperature
   temp.innerHTML = result.main.temp;
 
 // testing for return outputs
